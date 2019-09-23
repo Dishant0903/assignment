@@ -1,0 +1,166 @@
+1. 
+
+
+
+
+
+2.
+
+In ES6, the concept of classes were also introduced into the Ecmascript. It was not the actual class. It didn'nt perform 
+like the actual classes as in other programming languages. In Javascript, it doesn't offer any kind of new functionality, 
+it basically adds a more cleaner meaning to the code. The programmers can find it easy to read and understand a code or move
+to a different programming language. 
+
+Example, 
+
+class student{
+
+	constructor(name, grade, subject){
+		
+		this._name = name;
+
+		this._grade = grade;
+
+		this._subject = subject;
+		
+	};
+
+};
+
+class student1 extends student {
+	
+  constructor(name, grade, subject, rollNum){
+  super(name, grade, subject);
+  
+  this._rollNum = rollNum;
+  
+  };
+
+
+};
+
+var key1 = new student1('Dishant', 10, 'Computer Science', 101);
+
+alert(key1.rollNum);
+
+A 'class' is declared using the keyword 'class'. The 'constructor' can be considered as a special function which defines the
+properties of the object class. The 'super' and the 'extend' keywords are used to inherit the properties of the master class
+into the instant class.
+ 
+
+3. 
+
+Destructuring Assignment provides the ability to unpack/access all of the or some specific values from a sourced variable easily.
+
+Destructuring is of two types: Array destructuring and Object Destructuring.
+
+Array Destructuring
+
+Let's see the example of Array Destructuring in both ES5 and ES6:
+
+Es5
+
+Let's consider the following example;
+
+var arr = ['Mangoe','Apple','Pine-Apple','Banana'];
+
+Now, if we have to assign each the member of the arr to a new variable which is present at the index '0', then, by the traditional ES5 approach, we will
+write something like this:
+
+var first = arr[0];
+
+console.log(first);
+
+Mangoe
+
+Now, the biggest problem with this approach is that if we have to access n-elements, then, we have to assign each member of
+the array to n number of elements, then, we have to write the statement like the above one for n number of times which is a very
+tedious task for any programmer. 
+
+in order to solve this problem, we have got the concept of destructuring in the ES6.
+
+Now, let's see how it looks in the actual code:
+
+ES6
+
+var arr = ['Mangoe','Apple','Pine-Apple','Banana']; 
+
+var [first, second, ...rest] = arr;
+
+Now, we have assigned each member of the array 'arr' to a new variable in just a single line. 
+
+This is the power of destructuring. 
+
+Now, if we have to access each member, we can simply access it and check our output.
+
+console.log(first)
+VM682:1 Mangoe
+undefined
+console.log(second)
+VM740:1 Apple
+
+
+Object Destructuring
+
+var obj = {
+
+"first": 'Mango',
+
+"second": 'Banana',
+
+"third": 'Apple'
+
+};
+
+In the above example, now, if we want to assign each value of the object obj to a new variable in the ES5, then, we can
+implement that thing by the following way:
+
+Var first = obj1.first;
+.
+.
+.
+
+etc. 
+
+Clearly, it's a tedious task to do so. Hence, we can perform the object destructuring to easily perform this action in the 
+following way in the ES6:
+
+var {first, second, third} = obj1;
+
+Output
+
+console.log(first);
+VM719:1 Mango
+
+4. Template string literals provides a new way to define strings in a new way. Earlier, the strings can only be defined
+using the double (" ") and the single (' ') quotes. But, the new method of declaring strings also allowed to perform some special
+functions on the strings. We can easily multi-line strings with the help of the template literals, interpolate variables and 
+expressions in the string. 
+
+example,
+
+var str1 = `
+First
+second`.trim()
+            
+alert(str1);
+undefined
+
+//second program 
+
+var str2 = `Javascript is the no. ${3 - 2} programming language}`; 
+undefined
+console.log(str2);
+VM355:1 Javascript is the no. 1 programming language}
+
+6. 
+
+var email = 'a@aol';
+var regExp1 = /.+\@.+\..+/g;
+if(email.match(regExp1)){
+
+    console.log("Email is correct");
+    
+}
+else{
+console.log("Email entered is invalid")};
